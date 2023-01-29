@@ -1,0 +1,6 @@
+{
+  "common_start" : "시작하기",
+  "permission_information_message" : "앱 사용을 위해 필요한 필수 권한 허용이 필요합니다!\n아래의 내용을 확인하시고 시작하기 버튼을 눌러 권한을 허용해주세요.",
+  "permission_gps_information_title" : "정확한 위치 권한",
+  "permission_gps_information_content" : "내 주변 관광지를 알려주기 위해서 현재 나의 위치 정보를 사용합니다."
+}
