@@ -23,6 +23,7 @@ class DetailCommonRepository implements IBaseRepository<DetailCommonModel, Detai
 
   @override
   Future<ApiResult<DetailCommonModel>> fetchData({required DetailCommonDto requestDto}) async {
+    logger.d('fetchData');
     try {
       ApiResultDto<DetailCommonModel> result = await restClient.getDetailCommon(
         clientInfoDto: const ClientInfoDto(

@@ -5,7 +5,7 @@ import 'package:near_camp/provider/_common/detail_base_notifier.dart';
 import 'package:near_camp/repository/_common/base_repository.dart';
 import 'package:near_camp/repository/detail_common_repository.dart';
 
-final detailCommonProvider = AsyncNotifierProvider.family<DetailCommonNotifier, DetailCommonModel?, DetailCommonDto>(DetailCommonNotifier.new);
+final detailCommonProvider = AsyncNotifierProvider.family.autoDispose<DetailCommonNotifier, DetailCommonModel?, DetailCommonDto>(DetailCommonNotifier.new);
 
 class DetailCommonNotifier extends DetailBaseNotifier<DetailCommonModel?, DetailCommonDto> {
   @override

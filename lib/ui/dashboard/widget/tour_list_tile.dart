@@ -17,7 +17,7 @@ class TourListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.goNamed(RouteName.tourDetail, params: {
+        context.pushNamed(RouteName.tourDetail, params: {
           RouteParam.tourDetailParam1 : item.contentid,
           RouteParam.tourDetailParam2 : item.contenttypeid,
         });

@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:near_camp/api/app_dio.dart';
 import 'package:near_camp/api/dto/request/client_info_dto.dart';
-import 'package:near_camp/api/dto/request/detail_Info_dto.dart';
+import 'package:near_camp/api/dto/request/detail_information_dto.dart';
 import 'package:near_camp/api/dto/request/detail_common_dto.dart';
 import 'package:near_camp/api/dto/request/detail_image_dto.dart';
 import 'package:near_camp/api/dto/request/location_based_dto.dart';
@@ -41,7 +41,7 @@ abstract class TourRestClient {
   @GET('/detailInfo')
   Future<ApiResultDto<DetailInfoModel>> getDetailInfo({
     @Queries() required ClientInfoDto clientInfoDto,
-    @Queries() required DetailInfoDto detailInfoDto,
+    @Queries() required DetailInformationDto detailInfoDto,
   });
 
   @GET('/detailImage')

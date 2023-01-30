@@ -1,18 +1,18 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'detail_info_dto.g.dart';
+part 'detail_information_dto.g.dart';
 
 @JsonSerializable()
-class DetailInfoDto {
+class DetailInformationDto {
   final String contentId;
   final String contentTypeId;
 
-  DetailInfoDto({
+  DetailInformationDto({
     required this.contentId,
     required this.contentTypeId,
   });
 
-  factory DetailInfoDto.fromJson(Map<String, dynamic> json) => _$DetailInfoDtoFromJson(json);
+  factory DetailInformationDto.fromJson(Map<String, dynamic> json) => _$DetailInfoDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$DetailInfoDtoToJson(this);
 }

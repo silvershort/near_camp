@@ -1,15 +1,15 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:near_camp/api/dto/request/detail_Info_dto.dart';
+import 'package:near_camp/api/dto/request/detail_information_dto.dart';
 
-final detailInfoDtoProvider = NotifierProvider<DetailInfoDtoNotifier, DetailInfoDto>(DetailInfoDtoNotifier.new);
+final detailInfoDtoProvider = NotifierProvider<DetailInfoDtoNotifier, DetailInformationDto>(DetailInfoDtoNotifier.new);
 
-class DetailInfoDtoNotifier extends Notifier<DetailInfoDto> {
+class DetailInfoDtoNotifier extends Notifier<DetailInformationDto> {
   @override
-  DetailInfoDto build() {
+  DetailInformationDto build() {
     return state;
   }
 
-  void setDetailInfoDto(DetailInfoDto dto) {
+  void setDetailInfoDto(DetailInformationDto dto) {
     state = dto;
   }
 }

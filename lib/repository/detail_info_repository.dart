@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:near_camp/api/dto/request/client_info_dto.dart';
-import 'package:near_camp/api/dto/request/detail_Info_dto.dart';
+import 'package:near_camp/api/dto/request/detail_information_dto.dart';
 import 'package:near_camp/api/dto/response/api_result_dto.dart';
 import 'package:near_camp/api/tour_rest_client.dart';
 import 'package:near_camp/const/api_const.dart';
@@ -14,13 +14,13 @@ final detailInfoRepositoryProvider = Provider((ref) {
   return DetailInfoRepository(restClient: ref.watch(tourRestClientProvider));
 });
 
-class DetailInfoRepository implements IBaseRepository<DetailInfoModel, DetailInfoDto> {
+class DetailInfoRepository implements IBaseRepository<DetailInfoModel, DetailInformationDto> {
   DetailInfoRepository({required this.restClient});
 
   final TourRestClient restClient;
 
   @override
-  Future<ApiResult<DetailInfoModel>> fetchData({required DetailInfoDto requestDto}) async {
+  Future<ApiResult<DetailInfoModel>> fetchData({required DetailInformationDto requestDto}) async {
     try {
       ApiResultDto<DetailInfoModel> result = await restClient.getDetailInfo(
         clientInfoDto: const ClientInfoDto(
