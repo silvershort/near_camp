@@ -14,13 +14,13 @@ final detailInfoRepositoryProvider = Provider((ref) {
   return DetailInfoRepository(restClient: ref.watch(tourRestClientProvider));
 });
 
-class DetailInfoRepository implements IBaseRepository<DetailInfoModel, DetailInformationDto> {
+class DetailInfoRepository implements IBaseRepository<DetailInfoModel, DetailInfoDto> {
   DetailInfoRepository({required this.restClient});
 
   final TourRestClient restClient;
 
   @override
-  Future<ApiResult<DetailInfoModel>> fetchData({required DetailInformationDto requestDto}) async {
+  Future<ApiResult<DetailInfoModel>> fetchData({required DetailInfoDto requestDto}) async {
     try {
       ApiResultDto<DetailInfoModel> result = await restClient.getDetailInfo(
         clientInfoDto: const ClientInfoDto(

@@ -72,7 +72,7 @@ final goRouterProvider = Provider((ref) {
           String? contenttypeid = state.params[RouteParam.tourDetailParam2];
           return TourDetailScreen(
             contentId: contentid,
-            contenttypeId: contenttypeid,
+            contentTypeId: contenttypeid,
           );
         },
       ),

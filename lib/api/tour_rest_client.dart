@@ -41,7 +41,7 @@ abstract class TourRestClient {
   @GET('/detailInfo')
   Future<ApiResultDto<DetailInfoModel>> getDetailInfo({
     @Queries() required ClientInfoDto clientInfoDto,
-    @Queries() required DetailInformationDto detailInfoDto,
+    @Queries() required DetailInfoDto detailInfoDto,
   });
 
   @GET('/detailImage')

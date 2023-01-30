@@ -10,7 +10,6 @@ abstract class DetailBaseNotifier<M, Dto> extends AutoDisposeFamilyAsyncNotifier
 
   @override
   FutureOr<M?> build(Dto arg) {
-    state = AsyncLoading<M?>();
     _repository = initRepository();
     return fetchData(requestDto: arg).then((_) => state.value);
   }
@@ -21,10 +20,10 @@ abstract class DetailBaseNotifier<M, Dto> extends AutoDisposeFamilyAsyncNotifier
     logger.d('fetchData Dto : ${requestDto.runtimeType}');
     logger.d('fetchData Dto : ${requestDto.toString()}');
     ApiResult<M?> data = await _repository.fetchData(requestDto: requestDto);
-    logger.d('data type : ${data.runtimeType}');
 
     data.when(
       success: (value) {
+        logger.d('success value : ${value.toString()}');
         state = AsyncData<M?>(value);
       },
       error: (error, stackTrace) {

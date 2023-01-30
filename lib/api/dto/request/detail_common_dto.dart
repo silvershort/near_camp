@@ -1,32 +1,29 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'detail_common_dto.g.dart';
 
-@JsonSerializable()
-class DetailCommonDto {
-  final String contentId;
-  final String? contentTypeId;
-  final String? defaultYN;
-  final String? firstImageYN;
-  final String? areacodeYN;
-  final String? catcodeYN;
-  final String? addrinfoYN;
-  final String? mapinfoYN;
-  final String? overviewYN;
+part 'detail_common_dto.freezed.dart';
 
-  DetailCommonDto({
-    required this.contentId,
-    this.contentTypeId,
-    this.defaultYN = 'Y',
-    this.firstImageYN = 'Y',
-    this.areacodeYN,
-    this.catcodeYN,
-    this.addrinfoYN,
-    this.mapinfoYN,
-    this.overviewYN,
-  });
+@freezed
+class DetailCommonDto with _$DetailCommonDto {
+  const factory DetailCommonDto({
+    required String contentId,
+    String? contentTypeId,
+    @Default('Y')
+    String? defaultYN,
+    @Default('Y')
+    String? firstImageYN,
+    @Default('Y')
+    String? areacodeYN,
+    @Default('Y')
+    String? catcodeYN,
+    @Default('Y')
+    String? addrinfoYN,
+    @Default('Y')
+    String? mapinfoYN,
+    @Default('Y')
+    String? overviewYN,
+  }) = _DetailCommonDto;
 
   factory DetailCommonDto.fromJson(Map<String, dynamic> json) => _$DetailCommonDtoFromJson(json);
-
-  Map<String, dynamic> toJson() => _$DetailCommonDtoToJson(this);
 }

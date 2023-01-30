@@ -9,16 +9,20 @@ class TourDetailScreen extends ConsumerWidget {
   const TourDetailScreen({
     Key? key,
     this.contentId,
-    this.contenttypeId,
+    this.contentTypeId,
   }) : super(key: key);
   final String? contentId;
-  final String? contenttypeId;
+  final String? contentTypeId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     logger.d('contentId : $contentId}');
-    logger.d('contenttypeId : $contenttypeId}');
-    final state = ref.read(detailCommonProvider(DetailCommonDto(contentId: contentId!)));
+    logger.d('contentTypeId : $contentTypeId}');
+    final state = ref.watch(
+      detailCommonProvider(
+        DetailCommonDto(contentId: contentId!),
+      ),
+    );
 
     return Scaffold(
       appBar: DefaultAppBar(title: '상세화면'),
@@ -29,9 +33,7 @@ class TourDetailScreen extends ConsumerWidget {
               return SliverList(
                 delegate: SliverChildListDelegate(
                   [
-                    Text(
-                      data!.title,
-                    ),
+                    Text(data.toString()),
                   ],
                 ),
               );

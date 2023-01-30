@@ -6,20 +6,20 @@ part of 'detail_common_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-DetailCommonDto _$DetailCommonDtoFromJson(Map<String, dynamic> json) =>
-    DetailCommonDto(
+_$_DetailCommonDto _$$_DetailCommonDtoFromJson(Map<String, dynamic> json) =>
+    _$_DetailCommonDto(
       contentId: json['contentId'] as String,
       contentTypeId: json['contentTypeId'] as String?,
       defaultYN: json['defaultYN'] as String? ?? 'Y',
       firstImageYN: json['firstImageYN'] as String? ?? 'Y',
-      areacodeYN: json['areacodeYN'] as String?,
-      catcodeYN: json['catcodeYN'] as String?,
-      addrinfoYN: json['addrinfoYN'] as String?,
-      mapinfoYN: json['mapinfoYN'] as String?,
-      overviewYN: json['overviewYN'] as String?,
+      areacodeYN: json['areacodeYN'] as String? ?? 'Y',
+      catcodeYN: json['catcodeYN'] as String? ?? 'Y',
+      addrinfoYN: json['addrinfoYN'] as String? ?? 'Y',
+      mapinfoYN: json['mapinfoYN'] as String? ?? 'Y',
+      overviewYN: json['overviewYN'] as String? ?? 'Y',
     );
 
-Map<String, dynamic> _$DetailCommonDtoToJson(DetailCommonDto instance) =>
+Map<String, dynamic> _$$_DetailCommonDtoToJson(_$_DetailCommonDto instance) =>
     <String, dynamic>{
       'contentId': instance.contentId,
       'contentTypeId': instance.contentTypeId,
