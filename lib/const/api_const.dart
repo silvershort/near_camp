@@ -7,4 +7,5 @@ class ApiConst {
   static const String appName = 'TourCamp';
   static const int defaultNumOfRows = 50;
   static const String defaultRadius = '50000';
+  static const String defaultArrange = 'E';
 }

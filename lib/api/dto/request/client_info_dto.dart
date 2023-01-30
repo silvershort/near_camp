@@ -4,18 +4,19 @@ part 'client_info_dto.g.dart';
 
 @JsonSerializable()
 class ClientInfoDto {
+  @JsonKey(name: 'MobileOS')
   final String mobileOS;
+  @JsonKey(name: 'MobileApp')
   final String mobileApp;
   final String serviceKey;
+  @JsonKey(name: '_type')
+  final String type;
 
   const ClientInfoDto({
-    // ignore: invalid_annotation_target
-    @JsonKey(name: 'MobileOS')
     required this.mobileOS,
-    // ignore: invalid_annotation_target
-    @JsonKey(name: 'MobileApp')
     required this.mobileApp,
     required this.serviceKey,
+    this.type = 'json',
   });
 
   factory ClientInfoDto.fromJson(Map<String, dynamic> json)

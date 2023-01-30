@@ -1,3 +1,5 @@
+import 'package:near_camp/router/route_param.dart';
+
 class RouteName {
   static const String dashboard = 'dashboard';
 
@@ -12,4 +14,7 @@ class RouteName {
 
   static const String permissionPath = '/geolocator';
   static const String permission = 'geolocator';
+
+  static const String tourDetailPath = '/tourDetail/:${RouteParam.tourDetailParam1}/:${RouteParam.tourDetailParam2}';
+  static const String tourDetail = 'tourDetail';
 }

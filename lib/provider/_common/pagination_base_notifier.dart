@@ -5,10 +5,10 @@ import 'package:near_camp/api/dto/request/pagination_dto.dart';
 import 'package:near_camp/const/api_const.dart';
 import 'package:near_camp/model/_common/api_result.dart';
 import 'package:near_camp/model/_common/pagination.dart';
-import 'package:near_camp/repository/_common/pagination_repository.dart';
+import 'package:near_camp/repository/_common/base_pagination_repository.dart';
 
 /// Pagination 을 사용하는 Provider 의 기능을 정의하는 부모 Notifier, <M, Dto> M = Model, Dto = RequestDto
-abstract class PaginationProvider<M, Dto> extends AsyncNotifier<Pagination<M>> {
+abstract class PaginationBaseNotifier<M, Dto> extends AsyncNotifier<Pagination<M>> {
   late IBasePaginationRepository<M, Dto> _repository;
   late Dto _modelDto;
 
@@ -17,7 +17,7 @@ abstract class PaginationProvider<M, Dto> extends AsyncNotifier<Pagination<M>> {
     state = AsyncLoading<Pagination<M>>();
     _repository = initRepository();
     _modelDto = initModelDto();
-    return fetchData().then((value) => state.value ?? Pagination<M>());
+    return fetchData().then((_) => state.value ?? Pagination<M>());
   }
 
   IBasePaginationRepository<M, Dto> initRepository();

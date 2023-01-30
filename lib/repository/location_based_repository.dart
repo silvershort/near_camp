@@ -5,24 +5,22 @@ import 'package:near_camp/api/dto/request/client_info_dto.dart';
 import 'package:near_camp/api/dto/request/location_based_dto.dart';
 import 'package:near_camp/api/dto/request/pagination_dto.dart';
 import 'package:near_camp/api/dto/response/api_result_dto.dart';
-import 'package:near_camp/api/rest_client.dart';
+import 'package:near_camp/api/tour_rest_client.dart';
 import 'package:near_camp/const/api_const.dart';
 import 'package:near_camp/main.dart';
 import 'package:near_camp/model/_common/api_error.dart';
 import 'package:near_camp/model/_common/api_result.dart';
 import 'package:near_camp/model/_common/pagination.dart';
 import 'package:near_camp/model/location_based_model.dart';
-import 'package:near_camp/repository/_common/pagination_repository.dart';
+import 'package:near_camp/repository/_common/base_pagination_repository.dart';
 
 final locationBasedRepository = Provider<LocationBasedRepository>((ref) {
-  return LocationBasedRepository(dio: ref.watch(appDioProvider));
+  return LocationBasedRepository(restClient: ref.watch(tourRestClientProvider));
 });
 
 class LocationBasedRepository implements IBasePaginationRepository<LocationBasedModel, LocationBasedDto> {
-  LocationBasedRepository({required this.dio});
-
-  final Dio dio;
-  late RestClient restClient = RestClient(dio);
+  LocationBasedRepository({required this.restClient});
+  final TourRestClient restClient;
 
   @override
   Future<ApiResult<Pagination<LocationBasedModel>>> fetchPaginationData({

@@ -8,14 +8,16 @@ part of 'client_info_dto.dart';
 
 ClientInfoDto _$ClientInfoDtoFromJson(Map<String, dynamic> json) =>
     ClientInfoDto(
-      mobileOS: json['mobileOS'] as String,
-      mobileApp: json['mobileApp'] as String,
+      mobileOS: json['MobileOS'] as String,
+      mobileApp: json['MobileApp'] as String,
       serviceKey: json['serviceKey'] as String,
+      type: json['_type'] as String? ?? 'json',
     );
 
 Map<String, dynamic> _$ClientInfoDtoToJson(ClientInfoDto instance) =>
     <String, dynamic>{
-      'mobileOS': instance.mobileOS,
-      'mobileApp': instance.mobileApp,
+      'MobileOS': instance.mobileOS,
+      'MobileApp': instance.mobileApp,
       'serviceKey': instance.serviceKey,
+      '_type': instance.type,
     };
