@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "12609096642",
+    "project_id": "near-camp",
+    "storage_bucket": "near-camp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12609096642:android:b85f9da49bb681af2aa45b",
+        "android_client_info": {
+          "package_name": "com.silvershort.near_camp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12609096642-ephva57ervf8o25vl07crri0itcgesa6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH4OuzHAG-2ZCT6fBbRybBa-QPCJrKtAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12609096642-ephva57ervf8o25vl07crri0itcgesa6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
