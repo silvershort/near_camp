@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:kakao_flutter_sdk_share/kakao_flutter_sdk_share.dart';
 import 'package:logger/logger.dart';
 import 'package:near_camp/const/app_const.dart';
 import 'package:near_camp/firebase_options.dart';
@@ -20,6 +21,10 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
+  );
+  KakaoSdk.init(
+    nativeAppKey: '4d15ff24b4b98989236533e346184740',
+    javaScriptAppKey: 'b253d3346861fca5f70155c8308a91b1',
   );
 
   runApp(
