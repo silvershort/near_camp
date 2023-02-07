@@ -34,6 +34,9 @@ class TourDetailScreen extends ConsumerWidget {
                 delegate: SliverChildListDelegate(
                   [
                     Text(data.toString()),
+                    ElevatedButton(onPressed: () {
+                      ref.read(detailCommonProvider(DetailCommonDto(contentId: contentId!))).isLoading;
+                    }, child: Text('')),
                   ],
                 ),
               );

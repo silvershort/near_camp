@@ -27,6 +27,8 @@ dependencies:
   extended_image: ^7.0.0
   kakao_flutter_sdk_share: ^1.4.0
   package_info_plus: ^3.0.2
+  sqflite: ^2.2.4+1
+  path: ^1.8.3
 
 dev_dependencies:
   flutter_test:
