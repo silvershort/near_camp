@@ -28,8 +28,11 @@ dependencies:
   kakao_flutter_sdk_share: ^1.4.0
   package_info_plus: ^3.0.2
   sqflite: ^2.2.4+1
+  path: ^1.8.2
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
   flutter_lints: ^2.0.1
   freezed: ^2.3.2
   build_runner: ^2.3.3

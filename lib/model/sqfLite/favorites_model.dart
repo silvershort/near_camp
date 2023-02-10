@@ -1,10 +1,10 @@
-class BookmarkModel {
+class FavoritesModel {
   final String contentid;
   final String contenttypeid;
   final String title;
   final String? firstimage;
 
-  BookmarkModel({
+  FavoritesModel({
     required this.contentid,
     required this.contenttypeid,
     required this.title,
