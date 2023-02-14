@@ -5,6 +5,7 @@ class AppConst {
   static const String shareUrl = 'https://nearcamp.page.link';
   static const String packageName = 'com.silvershort.near_camp';
   static const String bundleId = 'com.silvershort.nearCamp';
+  static const String tableName = 'favorites';
   static const TextTheme appTextTheme = TextTheme(
     titleLarge: TextStyle(
       fontSize: 21,

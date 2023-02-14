@@ -9,12 +9,12 @@ class RouteName {
   static const String communityPath = '/community';
   static const String community = 'community';
 
-  static const String myPath = '/my';
-  static const String my = 'my';
+  static const String favoritesPath = '/favorites';
+  static const String favorites = 'favorites';
 
   static const String permissionPath = '/geolocator';
   static const String permission = 'geolocator';
 
-  static const String tourDetailPath = '/tourDetail/:${RouteParam.tourDetailParam1}/:${RouteParam.tourDetailParam2}';
+  static const String tourDetailPath = '/tourDetail';
   static const String tourDetail = 'tourDetail';
 }
